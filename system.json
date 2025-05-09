@@ -1,0 +1,43 @@
+{
+    "id": "nether",
+    "title": "Nethergard Core System",
+    "description": "The Core System for Nethergard created by Goody",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Goody",
+            "discord": "aradwen"
+        }
+    ],
+    "compatibility": {
+        "minimum": 13,
+        "verified": "13.342",
+        "maximum": 13
+    },
+    "esmodules": [
+        "nether.js"
+    ],
+    "styles": [
+        "nether.css"
+    ],
+    "languages": [
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "lang/de.json"
+        },
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "socket": false,
+    "grid": {
+      "distance": 1,
+      "units": "Meter"
+    },
+    "url": "https://github.com/Thegoodmen/Nethergard-VTT-System",
+    "manifest": "https://github.com/Thegoodmen/Nethergard-VTT-System/releases/latest/download/system.json",
+    "download": "https://github.com/Thegoodmen/Nethergard-VTT-System/releases/download/v0.0.1/system.zip"
+}
