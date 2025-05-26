@@ -1,4 +1,6 @@
 import { NETHER } from "./modules/config.js";
+import netherActor from "./modules/objects/NETHERActor.js";
+import netherCharakterSheet from "./modules/sheets/nethercharakterSheet.js";
 
 Hooks.once("init", async () => {
 
@@ -7,16 +9,20 @@ Hooks.once("init", async () => {
     // Setting up the Global Configuration Object
     CONFIG.NETHER = NETHER;
     CONFIG.INIT = true;
+    CONFIG.Actor.documentClass = netherActor;
 
     // Register custom Sheets and unregister the start Sheets
     // Items.unregisterSheet("core", ItemSheet);
-    // Actors.unregisterSheet("core", ActorSheet);
+
+    const DocumentSheetConfig = foundry.applications.apps.DocumentSheetConfig;
+    DocumentSheetConfig.unregisterSheet(Actor, "core", foundry.appv1.sheets.ActorSheet);
+    DocumentSheetConfig.registerSheet(Actor, "nether", netherCharakterSheet, { types: ["character"], makeDefault: true, label: "NETHER.SheetClassCharacter"});
 
     // Load all Partial-Handlebar Files
     preloadHandlebarsTemplates();
 
     // Register Additional Handelbar Helpers
-    registerHandelbarsHelpers();  
+    registerHandlebarsHelpers();  
 });
 
 Hooks.once("ready", async () => {
@@ -36,10 +42,10 @@ function preloadHandlebarsTemplates() {
 
     ];
     
-    return loadTemplates(templatePaths);
+    return foundry.applications.handlebars.loadTemplates(templatePaths);
 };
 
-function registerHandelbarsHelpers() {
+function registerHandlebarsHelpers() {
 
     Handlebars.registerHelper("equals", function(v1, v2) { return (v1 === v2)});
 

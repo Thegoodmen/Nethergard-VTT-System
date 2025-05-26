@@ -2,23 +2,144 @@
     "Actor": {
 
         "types": [
-            "PlayerCharakter"
+            "character"
         ],
 
-        "PlayerCharakter": {
+        "character": {
+            
+            "race": 0,
+            "background": 0,
+            "homeregion": 0,
 
-            "race": "Elf",
-            "gender": "male",
-            "age": "23",
-            "height": "180",
-            "weight": "75"
+            "charDetails": {
+                "nickname": "",
+                "title": "",
+                "age": 21,
+                "height": 180,
+                "weight": 75,
+                "hairColo": "blond",
+                "eyeColo": "green",
+                "personalTrait": ["trait"],
+                "alignment": "",
+                "appearance": "",
+                "family": "",
+                "background": "",
+                "goals": "",
+                "flaws": ""
+            },
+
+            "experience": {
+                "competence": "Beginner",
+                "earndExp": 0
+            },
+
+            "attributes": {
+                "intelligence": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "willpower": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "intuition": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "constitution": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "strength": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "dexterity": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "charisma": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "empathy": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "presence": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "magicAffinity": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "combatProwess": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "creativity": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                }
+            },
+
+            "baseValues": {
+                "health": {
+                    "value": 0,
+                    "max": 0,
+                    "reg": 0,
+                    "sustained": 0
+                },
+                "stamina": {
+                    "value": 0,
+                    "max": 0,
+                    "reg": 0,
+                    "sustained": 0
+                },
+                "mana": {
+                    "value": 0,
+                    "max": 0,
+                    "reg": 0,
+                    "sustained": 0
+                },
+                "luck": {
+                    "value": 0,
+                    "max": 0
+                },
+                "resistance": {
+                    "physical": 0,
+                    "mental": 0,
+                    "magical": 0
+                },
+
+                "evasion": 0,
+                "reactionSpeed": 0,
+                "speed": 0,
+                "critChance": 0,
+                "critMod": 0
+            }
         }
     },
 
     "Item": {
 
         "types":[
-            "Item"
+            "trait",
+            "skill",
+            "template"
         ],
 
         "templates": {
@@ -30,10 +151,28 @@
             }
         },
 
-        "Item": {
-            "templates": ["generalItems"],
-            "type": "item",
-            "quantity": 1
+        "trait": {
+            "description": "",
+            "bonus": [{
+                "type": "",
+                "value": ""
+            }]
+        },
+
+        "skill": {
+            "description": "",
+            "attribute1": "",
+            "attribute2": "",
+            "value": 0
+        },
+
+        "template": {
+            "description": "",
+            "type": "race",
+            "bonus": [{
+                "type": "",
+                "value": ""
+            }]
         }
     }
 }

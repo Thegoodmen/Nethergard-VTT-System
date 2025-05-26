@@ -6,3 +6,90 @@
   width: 480px;
   height: 480px;
 }
+.nether.sheet.characterSheet .headerBox {
+  float: left;
+  width: 100%;
+  height: 80px;
+}
+.nether.sheet.characterSheet .imgBox {
+  float: left;
+  width: 135px;
+  height: 175px;
+  position: relative;
+  margin-left: 8px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  border: 3px #e99d76 solid;
+}
+.nether.sheet.characterSheet .charImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nether.sheet.characterSheet .imgOverlay {
+  width: 135px;
+  height: 210px;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background-image: url(assets/img/imageBorder.png);
+  pointer-events: none;
+}
+.nether.sheet.characterSheet .charInfoBox {
+  float: right;
+  width: 75%;
+  height: 100%;
+  padding-top: 8px;
+  padding-left: 5px;
+}
+.nether.sheet.characterSheet .bigInputText {
+  width: 450px;
+  height: 32px;
+  font-size: 21px;
+}
+.nether.sheet.characterSheet .sideBarBox {
+  float: left;
+  width: 185px;
+  height: 570px;
+  border-image: url(assets/img/banner.png);
+  border-image-slice: 21 18 52 fill;
+  border-left-width: 18px;
+  border-right-width: 18px;
+  border-top-width: 21px;
+  border-bottom-width: 52px;
+  border-style: solid;
+}
+.nether.sheet.characterSheet .charReaSpeed {
+  float: left;
+  height: 25px;
+  width: 100%;
+  margin-top: 160px;
+  padding-left: 1px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+}
+.nether.sheet.characterSheet .charRes1 {
+  float: left;
+  width: 50px;
+  height: 43px;
+  background-image: url(assets/img/OneValueBorder.png);
+  background-size: contain;
+  text-align: center;
+  padding-top: 2px;
+  line-height: 16px;
+}
+.nether.sheet.characterSheet .charResFirst {
+  margin-right: 35px;
+}
+.nether.sheet.characterSheet .charResMiddle {
+  margin-top: 44px;
+  margin-left: 40px;
+}
+.nether.sheet.characterSheet .charResHead {
+  font-size: 11px;
+}
+.nether.sheet.characterSheet .charResValue {
+  font-size: 21px;
+  font-weight: bold;
+}
