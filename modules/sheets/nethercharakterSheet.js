@@ -21,16 +21,14 @@ export default class netherCharakterSheet extends api.HandlebarsApplicationMixin
             closeOnSubmit: false
         },
         position: {
-            width: 650,
-            height: 825
+            width: 650
         }
     }
 
     static PARTS = {
 
         header: { template: "systems/nether/templates/sheets/character/header.hbs" },
-        sidebar: { template: "systems/nether/templates/sheets/character/sidebar.hbs" },
-        description: { template: "systems/nether/templates/sheets/character/description.hbs" }
+        sidebar: { template: "systems/nether/templates/sheets/character/sidebar.hbs" }
     }
 
     get title() {
@@ -43,8 +41,8 @@ export default class netherCharakterSheet extends api.HandlebarsApplicationMixin
 
         super._configureRenderOptions(options);
 
-        if (this.document.limited) options.parts = ["description"]
-        else options.parts = ["header", "sidebar", "description"];
+        if (this.document.limited) options.parts = ["header"]
+        else options.parts = ["header", "sidebar"];
     }
     
     /** @override */
@@ -76,5 +74,15 @@ export default class netherCharakterSheet extends api.HandlebarsApplicationMixin
         this.sheetContext = context;
 
         return context;
+    }
+    
+    /** @override */
+    _onRender(context, options) {
+
+        const tabs = new foundry.applications.ux.Tabs({navSelector: ".tabs", contentSelector: ".content", initial: "tab1"});
+        tabs.bind(this.element);
+
+        const tabs2 = new foundry.applications.ux.Tabs({navSelector: ".tabs2", contentSelector: ".content2", initial: "tab2-1"});
+        tabs2.bind(this.element);
     }
 }

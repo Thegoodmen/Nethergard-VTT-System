@@ -19,6 +19,33 @@
         width: 100%;
         height: 80px;
     };
+    .logoBox {
+        float: left;
+        height: 100%;
+        width: 190px;
+        position: relative;
+    };
+    .logoImg {
+        height: 89%;
+        width: 38%;
+        margin-left: 55px;
+        background-image: url(assets/img/NethergardLogo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: invert(1);
+    };
+    .logoText {
+        position: absolute;
+        top: 22px;
+        left: -23px;
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+        text-shadow: -2px -2px 0 #ffffff, 
+            2px -2px 0 #ffffff, 
+            -2px 2px 0 #ffffff, 
+            2px 2px 0 #ffffff;
+    };
     
     //Div Box holding the CharacterSheet Image & IMG
     .imgBox {
@@ -46,25 +73,115 @@
         pointer-events: none;
     };
 
+    //Menu Bar
+    .menuBox {
+        float: left;
+        width: 400px;
+        height: 26px;
+        position: relative;
+    };
+    .menuBG {
+        position: absolute;
+        width: 435px;
+        height: 21px;
+        border-image: url(assets/img/BannerTop.png);
+        border-image-slice: 2 2 fill;
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
+        border-style: solid;
+        z-index: 5;
+        top: 3px
+    };
+    .menuLbl {
+        width: 120px;
+        height: 21px;
+        position: absolute;
+        padding-left: 12px;
+        padding-top: 5px;
+        z-index: 8;
+        font-size: 12px;
+    };
+    .menuIcon {
+        width: 35px;
+        height: 35px;
+        padding-top: 7px;
+        position: absolute;
+        z-index: 8;
+        font-size: 16px;
+        background-image: url(assets/img/OneValueBorderFilled.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -2px;
+        text-align: center;
+        line-height: 0;
+    };
+    .menuSetup {
+        width: 35px;
+        height: 35px;
+        padding-top: 7px;
+        position: absolute;
+        z-index: 8;
+        font-size: 16px;
+        top: -2px;
+        text-align: center;
+        line-height: 0;
+    };
+    .menuTabs {
+        border: 0px;
+    };
+
     //Div Box holding Main Infos about Character
     .charInfoBox {
         float: right;
-        width: 75%;
+        width: 69%;
         height: 100%;
         padding-top: 8px;
         padding-left: 5px;
     };
     .bigInputText {
-        width: 450px;
+        width: 340px;
         height: 32px;
         font-size: 21px;
+    };
+    .lvlBox {
+        float: right;
+        width: 52px;
+        height: 70px;
+        background-image: url(assets/img/LvlValueBorder.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    };
+    .lvlLable {
+        float: left;
+        width: 45px;
+        height: 25px;
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 10px;
+    };
+    .lvlValue {
+        float: left;
+        width: 45px;
+        height: 27px;
+        padding-top: 2px;
+        padding-left: 12px;
+        font-size: 18px;
+        font-weight: bold;
+    };
+    .charClass {
+        float: right;
+        width: 368px;
+        height: 34px;
+        margin-top: 4px;
     };
 
     //Div Box holding the Sidebar
     .sideBarBox {
         float: left;
         width: 185px;
-        height: 570px;
+        min-height: 500px;
         border-image: url(assets/img/banner.png);
         border-image-slice: 21 18 52 fill;
         border-left-width: 18px;
@@ -72,6 +189,7 @@
         border-top-width: 21px;
         border-bottom-width: 52px;
         border-style: solid;
+        margin-top: 3px;
     };
     .charReaSpeed {
         float: left;
@@ -107,5 +225,353 @@
         font-size: 21px;
         font-weight: bold;
     };
+    .sideBarFill1 {
+        float: left;
+        height: 65px;
+        width: 100%;
+    };
+    .sideBarFill2 {
+        float: left;
+        height: 20px;
+        width: 100%;
+    };
+    .sideBarFill3 {
+        float: left;
+        height: 5px;
+        width: 100%;
+    };
+    .ressBarBox {
+        float: left;
+        height: 40px;
+        width: 100%;
+    };
+    .ressBarHeader {
+        font-size: 16px;
+        margin-left: 5px;
+    };
+    .ressBar {
+        height: 13px;
+        width: 95%;
+        margin: 5px 5px 0px;
+        border: 2px solid gray;
+        border-radius: 4px;
+    };
+    .ressBarBar {
+        height: 10px;
+        background-color: green;
+        background-image: linear-gradient(45deg, 
+        rgba(255, 255, 255, .15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, .15) 50%, 
+        rgba(255, 255, 255, .15) 75%, 
+        transparent 75%, 
+        transparent);
+        background-size: 1rem 1rem;
+    };
+    .ressBarValue {
+        width: 100%;
+        padding-right: 5px;
+        text-align: right;
+        font-size: 12px;
+    };
+    .ressBarHealth {
+        background-color: green;
+    };
+    .ressBarStamina {
+        background-color: yellow;
+    };
+    .ressBarMana {
+        background-color: blue;
+    };
+    .ressBarLuck {
+        background-color: silver;
+    };
 
+    //Main Box for Displaying Content in Sheet
+    .contentBox {
+        float: left;
+        width: 430px;
+        min-height: 500px;
+    };
+    .charSheetBox {
+        float: left;
+        width: 430px;
+        min-height: 50px;
+    };
+
+    //CharAttributsStats Display on Page 1
+    .charStatfieldset {
+        float: left;
+        width: 205px;
+        height: 80px;
+        border: solid;
+        border-radius: 1em;
+        margin: 1em 5px 3px;
+        padding: 0 1em 1em;
+        background-color: rgba(0, 0, 0, 0.25);
+        position: relative;
+    };
+    .charStatlegend {
+        transform: translatey(-50%);
+        width: max-content;
+        padding: 0 0.15em;
+        font-size: 32px;
+    };
+    .charStatBox {
+        float: left;
+        width: 50px;
+        height: 50px;
+        padding-top: 3px;
+        font-size: 16px;
+        background-image: url(assets/img/OneValueBorderFilled.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 22px;
+        color: white;
+        text-align: center;
+        line-height: 14px;
+    };
+
+    //Character Sheet HR Classes
+    .subMain {
+        clear: both;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 3px 0;
+        align-items: center;
+        font-size: 20px;
+    };
+    .menuhrbox {
+        margin-left: 5px;
+        margin-right: 5px;
+    };
+    .menuhr {
+        border: none;
+        border-top: 2px solid #cb0101;
+        border-bottom: 1px solid #d5412f;
+    };
+
+    //Char Input Fields Half
+    .charinputfullbox {
+        float: left;
+        width: 100%;
+        margin-bottom: 5px;
+    };
+    .charinputhalfbox {
+        float: left;
+        width: 50%;
+        margin-bottom: 5px;
+    };
+    .charinputlbl {
+        font-size: 14px;
+        line-height: 18px;
+        padding-left: 8px
+    };
+    .charinputbox {
+        padding-left: 5px;
+        padding-right: 8px;
+    };
+    .charinputhalf {
+        height: 24px;
+    };
+    .charinputfull {
+        min-height: 70px;
+        width: 100%;
+    };
+
+    //Char Trait Indikators
+    .chartraitbox {
+        height: 130px;
+        width: 195px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-left: 5px;
+        padding-right: 8px;
+    };
+    .charvirtubox {
+        width: 160px;
+        position: relative;
+        background-color: #d9850c;
+        border-style: dashed;
+        border-color: orange;
+        border-radius: 5px;
+        padding-left: 7px;
+        margin-top: 5px;
+        margin-left: 10px;
+    };
+    .charflawbox {
+        width: 160px;
+        position: relative;
+        background-color: #0887b9;
+        border-style: dashed;
+        border-color: rgb(16, 194, 218);
+        border-radius: 5px;
+        padding-left: 7px;
+        margin-top: 5px;
+        margin-left: 10px;
+    };
+    .traiticon {
+        position: static;
+        margin-right: 8px;
+    };
+
+    //Char Combat Stats
+    .charcombatstatbox {
+        width: 100%;
+        height: 70px;
+    };
+    .charcombatinnerstatbox {
+        width: 280px;
+        height: 60px;
+        position: relative;
+        margin: 0 auto;
+    };
+    .charcombatstat {
+        float: left;
+        width: 65px;
+        height: 65px;
+        padding-top: 3px;
+        font-size: 16px;
+        background-image: url(assets/img/OneValueBorderFilled.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        color: white;
+        text-align: center;
+        line-height: 10px;
+    };
+    .charcombatstatvalue {
+        position: absolute;
+        bottom: 21px;
+        left: 22px;
+        font-size: 21px;
+        font-weight: bold;
+    };
+
+    //Char Progression
+    .charprogressbox {
+        float: left;
+        width: 100%;
+        height: 40px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    };
+    .charprogresslbl {
+        float: left;
+        width: 100px;
+        padding-top: 2px;
+        padding-left: 8px;
+        font-size: 14px;
+        line-height: 18px;
+    };
+    .charprogressinput {
+        width: 70px;
+        height: 24px;
+        margin: 0px 4px;
+    };
+    .charprogressbnt {
+        float: right;
+        width: 83px;
+        height: 24px;
+        margin-right: 15px;
+        padding-top: 2px;
+        text-align: center;
+        color: white;
+        border: 2px solid;
+        border-radius: 6px;
+        border-color: #e99d76;
+        background-color: #cc0001
+    };
+
+    //Char Competenz Mark
+    .charcompetence {
+        width: 90px;
+        position: relative;
+        background-color: #d81d15;
+        border-style: dashed;
+        border-width: 2px;
+        border-color: #f0a07b;
+        border-radius: 3px;
+        margin-left: 2px;
+        font-size: 12px;
+        padding-top: 1px;
+        padding-left: 4px;
+    };
+
+    //Character Progression Attribut Table
+    .charprogressattbox {
+        float: left;
+    };
+    .charprogressattmenubox {
+        float: left;
+        padding-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    };
+    .charprogressatttypebnt {
+        float: left;
+        width: 100px;
+        height: 24px;
+        margin-right: 5px;
+        padding-top: 2px;
+        text-align: center;
+        color: white;
+        border: 2px solid;
+        border-radius: 6px;
+        border-color: #e99d76;
+        background-color: #cc0001;
+    };
+    .charprogressatttable {
+        margin: 0;
+        margin-left: 5px;
+    };
+    .charprogressatttr {
+        height: 45px;
+    };
+    .charprogressatttrdiv {
+        height: 8px;
+    };
+    .charprogressattlbl {
+        width: 90px;
+        padding: 0;
+        padding-left: 10px;
+    };
+    .charprogressattstatvalue {
+        width: 35px;
+        padding: 2px;
+        text-align: center;
+    };
+    .charprogressattdivider1 {
+        width: 25px;
+        padding: 0px;
+        text-align: center;
+    };
+    .charprogressattinput {
+        width: 35px;
+        height: 25px;
+    };
+    .charprogressincreasbnt {
+        float: right;
+        width: 25px;
+        height: 24px;
+        padding-top: 2px;
+        text-align: center;
+        color: white;
+        border: 2px solid;
+        border-radius: 13px;
+        border-color: #e99d76;
+        background-color: #cc0001;
+    };
+    .charprogressattstatbnt {
+        width: 35px;
+        padding: 0px;
+    };
+    .charprogressattstatcost {
+        width: 55px;
+        padding: 0px;
+        text-align: center;
+    };
 }

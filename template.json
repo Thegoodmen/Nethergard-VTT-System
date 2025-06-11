@@ -34,7 +34,7 @@
             },
 
             "attributes": {
-                "intelligence": {
+                "wisdom": {
                     "start": 0,
                     "raised": 0,
                     "bonus": 0

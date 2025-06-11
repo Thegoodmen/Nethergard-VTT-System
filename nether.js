@@ -38,7 +38,11 @@ function preloadHandlebarsTemplates() {
 
     const templatePaths = [
 
-        // "systems/nether/templates/partials/template.hbs",
+        "systems/nether/templates/partials/character-sheet-character.hbs",
+        "systems/nether/templates/partials/character-sheet-background.hbs",
+        "systems/nether/templates/partials/character-sheet-skill.hbs",
+        "systems/nether/templates/partials/character-sheet-combat.hbs",
+        "systems/nether/templates/partials/character-sheet-progression.hbs",
 
     ];
     

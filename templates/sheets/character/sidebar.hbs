@@ -1,21 +1,122 @@
-<div class="sideBarBox">
+<div>
+    <div class="sideBarBox">
 
-    <div class="imgBox">
-        <img class="charImg" src="{{actor.img}}" data-edit="img" data-action="editImage" title="{{actor.name}}" >
-        <div class="imgOverlay">
-            <div class="charReaSpeed">35</div>
-            <div class="charRes1 charResFirst"><span class="charResHead">Body</span></br><span class="charResValue">55</span></div>
-            <div class="charRes1"><span class="charResHead">Mind</span></br><span class="charResValue">34</span></div>
+        <div class="imgBox">
+            <img class="charImg" src="{{actor.img}}" data-edit="img" data-action="editImage" title="{{actor.name}}" >
+            <div class="imgOverlay">
+                <div class="charReaSpeed">35</div>
+                <div class="charRes1 charResFirst"><span class="charResHead">Body</span></br><span class="charResValue">55</span></div>
+                <div class="charRes1"><span class="charResHead">Mind</span></br><span class="charResValue">34</span></div>
+            </div>
+            <div class="charRes1 charResMiddle"><span class="charResHead">Magic</span></br><span class="charResValue">74</span></div>
         </div>
-        <div class="charRes1 charResMiddle"><span class="charResHead">Magic</span></br><span class="charResValue">74</span></div>
+
+        <div class="sideBarFill1"></div>
+
+        <div class="ressBarBox">
+            <div class="ressBarHeader">Health</div>
+            <div class="ressBar"><div class="ressBarBar ressBarHealth" style="width: 20%;"></div></div>
+            <div class="ressBarValue">435 / 435</div>
+        </div>
+
+        <div class="ressBarBox">
+            <div class="ressBarHeader">Stamina</div>
+            <div class="ressBar"><div class="ressBarBar ressBarStamina" style="width: 20%;"></div></div>
+            <div class="ressBarValue">555 / 555</div>
+        </div>
+
+        <div class="ressBarBox">
+            <div class="ressBarHeader">Mana</div>
+            <div class="ressBar"><div class="ressBarBar ressBarMana" style="width: 20%;"></div></div>
+            <div class="ressBarValue">65 / 65</div>
+        </div>
+
+        <div class="ressBarBox">
+            <div class="ressBarHeader">Luck</div>
+            <div class="ressBar"><div class="ressBarBar ressBarLuck" style="width: 20%;"></div></div>
+            <div class="ressBarValue">6 / 6</div>
+        </div>
+
+        <div class="sideBarFill2"></div>
+
+        <div class="sideBarFill3"></div>
+
     </div>
 
-    <div class="sideBarFill1"></div>
+    <div class="menuBox">
 
-    <div class="ressBarBox">
-        <div class="ressBarHeader">Health</div>
-        <div class="ressBar"></div>
-        <div class="ressBarValue">435 / 435</div>
+        <div class="menuBG"></div>
+        <div class="menuLbl"></div>
+
+        <nav class="tabs menuTabs" data-group="primary-tabs">  
+            <div class="menuIcon" style="left: 135px;">
+                <a class="item" data-tab="tab1" data-group="primary-tabs">
+                    <i class="fa-solid fa-book-open-cover"></i>
+                </a>
+            </div>
+            <div class="menuIcon" style="left: 180px;">
+                <a class="item" data-tab="tab2" data-group="primary-tabs">
+                    <i class="fa-solid fa-book"></i>
+                </a>
+            </div>
+            <div class="menuIcon" style="left: 225px;">
+                <a class="item" data-tab="tab3" data-group="primary-tabs">
+                    <i class="fa-regular fa-stars"></i>
+                </a>
+            </div>
+            <div class="menuIcon" style="left: 270px;">
+                <a class="item" data-tab="tab4" data-group="primary-tabs">
+                    <i class="fa-solid fa-swords"></i>
+                </a>
+            </div>
+            <div class="menuIcon" style="left: 315px;">
+                <a class="item" data-tab="tab5" data-group="primary-tabs">
+                    <i class="fa-solid fa-aperture"></i>
+                </a>
+            </div>
+            <div class="menuIcon" style="left: 360px;">
+                <a class="item" data-tab="tab6" data-group="primary-tabs">
+                    <i class="fa-solid fa-bezier-curve"></i>
+                </a>
+            </div>
+            <div class="menuSetup" style="left: 405px;">
+                <a class="item" data-tab="tab7" data-group="primary-tabs">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </a>
+            </div>
+        </nav>
+
     </div>
 
+    <div class="contentBox">
+        <section class="content">
+            <div class="tab" data-tab="tab1" data-group="primary-tabs">
+                {{> "systems/nether/templates/partials/character-sheet-character.hbs"}}
+            </div>
+
+            <div class="tab" data-tab="tab2" data-group="primary-tabs">
+                {{> "systems/nether/templates/partials/character-sheet-background.hbs"}}
+            </div>
+
+            <div class="tab" data-tab="tab3" data-group="primary-tabs">
+                {{> "systems/nether/templates/partials/character-sheet-skill.hbs"}}
+            </div>
+
+            <div class="tab" data-tab="tab4" data-group="primary-tabs">
+                {{> "systems/nether/templates/partials/character-sheet-combat.hbs"}}
+            </div>
+
+            <div class="tab" data-tab="tab5" data-group="primary-tabs">
+                {{> "systems/nether/templates/partials/character-sheet-progression.hbs"}}
+            </div>
+
+            <div class="tab" data-tab="tab6" data-group="primary-tabs">
+                Pfade
+            </div>
+
+            <div class="tab" data-tab="tab7" data-group="primary-tabs">
+                Settings
+            </div>
+        </section>
+    </div>
 </div>
