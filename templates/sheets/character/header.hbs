@@ -1,17 +1,18 @@
 <div class="headerBox">
 
     <div class="logoBox">
-        <div class="logoImg"><div class="logoText">Nethergard</div></div>
+        <div class="logoImg"><div class="logoText">{{localize "NETHER.SystemName"}}</div></div>
     </div>
 
     <div class="charInfoBox">
         <input class="bigInputText" type="text" name="name" value="{{actor.name}}">
         <div class="lvlBox">
-            <div class="lvlLable">Lvl</div>
-            <div class="lvlValue">12</div>
+            <div class="lvlLable">{{localize "NETHER.System.LevelShort"}}</div>
+            <div class="lvlValue">{{system.experience.level}}</div>
         </div>
         <div class="charClass">
-            <div class="charcompetence"><div class="traiticon fa-regular fa-circle-dot"></div>Beginner</div>
+            <div class="charcompetence"><div class="traiticon fa-regular fa-circle-dot"></div>
+            {{localize (concat "NETHER.System." system.experience.competence "")}}</div>
         </div>
     </div>
 </div>

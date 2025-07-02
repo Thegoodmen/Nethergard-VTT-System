@@ -146,12 +146,13 @@
 }
 .nether.sheet.characterSheet .lvlValue {
   float: left;
-  width: 45px;
+  width: 30px;
   height: 27px;
   padding-top: 2px;
   padding-left: 12px;
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 .nether.sheet.characterSheet .charClass {
   float: right;
@@ -431,6 +432,7 @@
   width: 70px;
   height: 24px;
   margin: 0px 4px;
+  text-align: right;
 }
 .nether.sheet.characterSheet .charprogressbnt {
   float: right;

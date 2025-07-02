@@ -1,6 +1,3 @@
-import * as Util from "../utils.js";
-import * as LSFunction from "../listenerFunctions.js"
-
 export default class netherActor extends Actor {
 
     prepareData() {

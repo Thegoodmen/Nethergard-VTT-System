@@ -2,18 +2,18 @@
 
     <div class="form-group subMain">
         <div class="menuhrbox" style="width: 25px;"><hr class="menuhr"></div>
-        Character Progression
+        {{localize "NETHER.System.charProg"}}
         <div class="menuhrbox" style="flex: 1;"><hr class="menuhr"></div>
     </div>
 
     <div class="charexpbox">
         
         <div class="charprogressbox">
-            <div class="charprogresslbl">Experience</div>
+            <div class="charprogresslbl">{{localize "NETHER.System.Exp"}}</div>
             <div class="charinputbox">
-                <input class="charprogressinput" type="number" disabled> / 
-                <input class="charprogressinput" type="number" disabled>
-                <a class="charprogressbntlink"><div class="charprogressbnt">Add Event</div></a>
+                <input class="charprogressinput" type="number" value="{{system.experience.spentExp}}" disabled> / 
+                <input class="charprogressinput" type="number" name="system.experience.earndExp1" value="{{system.experience.earndExp}}">
+                <a class="charprogressbntlink"><div class="charprogressbnt">{{localize "NETHER.System.addEvent"}}</div></a>
             </div>
         </div>
 
@@ -21,23 +21,23 @@
 
     <div class="form-group subMain">
         <div class="menuhrbox" style="width: 25px;"><hr class="menuhr"></div>
-        Attribute Progression
+        {{localize "NETHER.System.atriProg"}}
         <div class="menuhrbox" style="flex: 1;"><hr class="menuhr"></div>
     </div>
 
     <div class="charprogressattmenubox">
         <nav class="tabs2 menuTabs" data-group="secondary-tabs">  
             <a class="item" data-tab="tab2-1" data-group="secondary-tabs">
-                <div class="charprogressatttypebnt">Body Skills</div>
+                <div class="charprogressatttypebnt">{{localize "NETHER.System.bodySkill"}}</div>
             </a>
             <a class="item" data-tab="tab2-2" data-group="secondary-tabs">
-                <div class="charprogressatttypebnt">Mind Skills</div>
+                <div class="charprogressatttypebnt">{{localize "NETHER.System.mindSkill"}}</div>
             </a>
             <a class="item" data-tab="tab2-3" data-group="secondary-tabs">
-                <div class="charprogressatttypebnt">Social Skills</div>
+                <div class="charprogressatttypebnt">{{localize "NETHER.System.sociSkill"}}</div>
             </a>
             <a class="item" data-tab="tab2-4" data-group="secondary-tabs">
-                <div class="charprogressatttypebnt">Special Skills</div>
+                <div class="charprogressatttypebnt">{{localize "NETHER.System.specSkill"}}</div>
             </a>
         </nav>
     </div>

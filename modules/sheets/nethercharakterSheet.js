@@ -1,7 +1,3 @@
-import * as Util from "../utils.js";
-import * as LSFunction from "../listenerFunctions.js"
-import * as Dialog from "../dialog.js";
-
 const api = foundry.applications.api;
 const sheets = foundry.applications.sheets;
 
@@ -58,7 +54,7 @@ export default class netherCharakterSheet extends api.HandlebarsApplicationMixin
         
         const baseData = await super._prepareContext();
         
-        const context = {
+        let context = {
     
             // Set General Values
             owner: baseData.document.isOwner,
@@ -69,8 +65,10 @@ export default class netherCharakterSheet extends api.HandlebarsApplicationMixin
             config: CONFIG.NETHER,
             isGM: baseData.user.isGM,
             effects: baseData.document.effects
-        }
+        };
 
+        context = this.calculateExperiance(context);
+        
         this.sheetContext = context;
 
         return context;
@@ -84,5 +82,27 @@ export default class netherCharakterSheet extends api.HandlebarsApplicationMixin
 
         const tabs2 = new foundry.applications.ux.Tabs({navSelector: ".tabs2", contentSelector: ".content2", initial: "tab2-1"});
         tabs2.bind(this.element);
+    }
+
+
+    calculateExperiance(context) {
+
+        let earndExp = context.system.experience.earndExp;
+        let competence = context.system.experience.competence;
+        let spentExp = 0;
+        let level = 0;
+
+        // Calculate Level
+
+        level = ( Math.ceil( (earndExp / 1000) * CONFIG.NETHER.compLvlMultiplier[competence]) - 1);
+
+
+        
+        
+        context.system.experience.spentExp = spentExp;
+        context.system.experience.level = level;
+
+
+        return context;
     }
 }

@@ -19,17 +19,17 @@
                 "weight": 75,
                 "hairColo": "blond",
                 "eyeColo": "green",
-                "personalTrait": ["trait"],
                 "alignment": "",
-                "appearance": "",
                 "family": "",
+                "appearance": "",
                 "background": "",
                 "goals": "",
-                "flaws": ""
+                "virtues": ["trait"],
+                "flaws": ["trait"]
             },
 
             "experience": {
-                "competence": "Beginner",
+                "competence": "lvlComp1",
                 "earndExp": 0
             },
 
